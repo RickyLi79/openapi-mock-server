@@ -1,0 +1,94 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "api2.oas3.json",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/oas2/m1": {
+      "get": {
+        "description": "no `response.body` schema",
+        "tags": [
+          "valid.response.body"
+        ],
+        "responses": {
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "type": "object",
+              "required": [
+                "code",
+                "message"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "`response.body` , valid",
+        "tags": [
+          "valid.response.body"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "headers": {
+              "x-test": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ok": {
+                  "enum": [
+                    1
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "`response.body` , invalid",
+        "tags": [
+          "valid.response.body"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ok": {
+                  "enum": [
+                    2
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

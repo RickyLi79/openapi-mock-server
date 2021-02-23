@@ -1,0 +1,63 @@
+{
+  "name": "openapi-mock-server",
+  "version": "1.0.0",
+  "description": "Example for [@rickyli79/json-schema-mock](https://github.com/RickyLi79/json-schema-mock) and [egg-openapi-router](https://github.com/RickyLi79/egg-openapi-router)",
+  "private": true,
+  "egg": {
+    "typescript": true,
+    "declarations": true
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-openapi-mock-server",
+    "stop": "egg-scripts stop --title=egg-server-openapi-mock-server",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test-local": "egg-bin test",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "cov": "egg-bin cov",
+    "tsc": "ets && tsc -p tsconfig.build.json",
+    "ci": "npm run lint && npm run cov && npm run tsc",
+    "lint": "eslint . --ext .ts",
+    "clean": "ets clean",
+    "ets": "ets clean && ets -o typings/index.d.ts -w"
+  },
+  "dependencies": {
+    "@rickyli79/json-schema-mock": "^1.0.1",
+    "egg": "^2.6.1",
+    "egg-openapi-router": "^1.0.4",
+    "egg-scripts": "^2.6.0",
+    "mockjs": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/mockjs": "^1.0.3",
+    "@types/node": "^7.0.12",
+    "@types/supertest": "^2.0.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.16.0",
+    "eslint": "^6.7.2",
+    "eslint-config-egg": "^8.0.0",
+    "tslib": "^1.9.0",
+    "typescript": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "eslintIgnore": [
+    "coverage"
+  ],
+  "author": {
+    "name": "RickyLi79",
+    "email": "382688672@qq.com",
+    "url": "https://github.com/RickyLi79"
+  },
+  "license": "MIT"
+}
