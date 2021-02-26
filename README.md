@@ -2,7 +2,9 @@
 
 ## Description
 
-This is Example for [@rickyli79/json-schema-mock](https://github.com/RickyLi79/json-schema-mock) and [egg-openapi-router](https://github.com/RickyLi79/egg-openapi-router)
+This is an example for 
+- [@rickyli79/json-schema-mock v1.0.3](https://www.npmjs.com/package/@rickyli79/json-schema-mock/v/1.0.3) 
+- [egg-openapi-router v1.0.10](https://npmjs.org/package/egg-openapi-router/v/1.0.10)
 
 ## Install & Run
 

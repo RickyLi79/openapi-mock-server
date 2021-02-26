@@ -50,7 +50,7 @@ export default class extends Service {
         if (required) {
           const schema = oasVer === 3 ? (<any>iHeader).schema : iHeader;
           const sm = await SchemaMock.parser(schema);
-          headers[iField] = sm.mock();
+          headers[iField] = sm.mock({ defaultAdditionalItems: false });
         }
       }
     }
@@ -72,7 +72,7 @@ export default class extends Service {
           sm = MockStore.SchemaMock[smId] = await SchemaMock.parser(schema);
         }
       }
-      content = sm.mock();
+      content = sm.mock({ defaultAdditionalItems: false });
     }
     // #endregion
 

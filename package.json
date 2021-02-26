@@ -22,9 +22,9 @@
     "ets": "ets clean && ets -o typings/index.d.ts -w"
   },
   "dependencies": {
-    "@rickyli79/json-schema-mock": "^1.0.1",
+    "@rickyli79/json-schema-mock": "1.0.3",
     "egg": "^2.6.1",
-    "egg-openapi-router": "^1.0.4",
+    "egg-openapi-router": "1.0.10",
     "egg-scripts": "^2.6.0",
     "mockjs": "^1.1.0"
   },
