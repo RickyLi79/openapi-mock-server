@@ -10,8 +10,12 @@ export default (appInfo: EggAppInfo) => {
   // add your egg config in here
   config.middleware = [];
 
+  config.security = { csrf: { enable: false } };
+
   config.openapiRouter = {
-    proxyAction: 'proxyAction',
+    options: {
+      proxyAction: 'proxyAction',
+    },
   };
 
   // the return config will combines to EggAppConfig
